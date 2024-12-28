@@ -135,12 +135,12 @@ game:GetService("ReplicatedStorage").LoadoutGP:FireServer(unpack(args))
 
 local Input = SecondTab:CreateInput({
    Name = "tp.player.toplayer",
-   CurrentValue = "",
+   CurrentValue = "nil",
    PlaceholderText = "Player Username Not Displayname",
    RemoveTextAfterFocusLost = false,
    Flag = "Input1",
    Callback = function(username)
-      local otol = game.Workspace.username.HumanoidRootPart
+      local otol = game.Workspace[username]HumanoidRootPart
       local ufol = game.Players.LocalPlayer.Character.HumanoidRootPart
       ufol.CFrame = otol.CFrame
    end,
