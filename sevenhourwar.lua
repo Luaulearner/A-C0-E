@@ -29,10 +29,12 @@ MainSection:NewTextBox("SetWalkSpeed", "This should support mobile and pc, for s
 end)
 
 
-Section:NewDropdown("Gamepass Guns", "if you dont see ur wanted gun add me on discord! hallowdark0", {"Ballistic Shield", "OSR", "AK-47", "M249", "Desert Eagle", "AR3", "SOBT Shield", "Dual USPs", "Dual Glocks"}, function(currentOption)
+MainSection:NewDropdown("Gamepass Guns", "if you dont see ur wanted gun add me on discord! hallowdark0", {"Ballistic Shield", "OSR", "AK-47", "M249", "Desert Eagle", "AR3", "SOBT Shield", "Dual USPs", "Dual Glocks"}, function(currentOption)
     local args = {
     [1] = currentOption
 }
 
 game:GetService("ReplicatedStorage").LoadoutGP:FireServer(unpack(args))
 end)
+
+local NonMain = Window:NewTab("!")
