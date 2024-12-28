@@ -37,4 +37,28 @@ MainSection:NewDropdown("Gamepass Guns", "if you dont see ur wanted gun add me o
 game:GetService("ReplicatedStorage").LoadoutGP:FireServer(unpack(args))
 end)
 
-local NonMain = Window:NewTab("!")
+local NonMain = Window:NewTab("Nightvision")
+local NonMainSection = NonMain:NewSection("Brightness + Ambient")
+
+
+NonMainSection:NewToggle("Ambient", "Switch between the brightest and the lowest! on = bright off = dark", function(state)
+    if state then
+        game.Lighting.Ambient = Color3.fromRGB(255, 255, 255)
+    else
+        game.Lighting.Ambient = Color3.fromRGB(0, 0, 1) --// basically defualt
+    end
+end)
+
+
+Section:NewToggle("ToggleText", "ToggleInfo", function(state)
+    if state then
+        game.Lighting.Brightness = 9
+    else
+        game.Lighting.Brightness = 1
+    end
+end)
+
+
+Section:NewSlider("Fog", "control the flippin fog!", 100000, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Lighting.FogEnd = s
+end)
