@@ -65,19 +65,7 @@ local Button = MainTab:CreateButton({
       end
     end
    end,
-})
-
-
-local Button = MainTab:CreateButton({
-   Name = "clear_cache",
-   Callback = function()
-   workspace.Cache:Destroy()
-   workspace.MapScripts:Destroy()
-   workspace.Scripts:Destroy()
-   workspace.AmmoBoxes:Destroy()
-   workspace.AnimatedMorphs:Destroy()
-   end,
-})
+ })
 
 
 
@@ -104,7 +92,7 @@ local Slider = FirstTab:CreateSlider({
    Range = {0, 100000},
    Increment = 1,
    Suffix = "FogEnd",
-   CurrentValue = 500,
+   CurrentValue = 0,
    Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(Value)
       game.Lighting.FogEnd = Value
