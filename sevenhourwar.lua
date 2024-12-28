@@ -15,6 +15,11 @@ MainSection:NewButton("Map_UltraBoost", "Basically Removes All Unnesscary parts 
       end
     end
 end)
-Section:NewTextBox("Teleport To", "basically teleports you to people, useful for getting into rps or if ur lost xd btw you need to use the players username not display!!", function(txt)
+MainSection:NewTextBox("Teleport To", "basically teleports you to people, useful for getting into rps or if ur lost xd btw you need to use the players username not display!!", function(txt)
+	local tpto = game.Workspace.txt.HumanoidRootPart
+	local self = game.Players.LocalPlayer.Character.HumanoidRootPart
+	self.CFrame = tpto.CFrame
+end)
+MainSection:NewTextBox("SetWalkSpeed", "This should support mobile and pc, for speed ;)", function(speedpower)
 	
 end)
