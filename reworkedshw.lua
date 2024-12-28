@@ -10,7 +10,7 @@ local Mainwindow = library:AddWindow("_fpsboost", {
 local features = Mainwindow:AddTab("Features") -- Name of tab
 features:Show() -- shows the tab
 
-features:AddButton("",function()
+features:AddButton("yes",function()
 	while true do
 	  task.wait(999999)
 	  print("yes bro")
