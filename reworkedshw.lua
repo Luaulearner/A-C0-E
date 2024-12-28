@@ -37,9 +37,10 @@ if game.PlaceId == 386327051 then
    }
 })
 
+-------// MainTab
 
 local MainTab = Window:CreateTab("Home", "app-window") -- Title, Image
-local MainSection = MainTab:CreateSection("Place.Function")
+local MainSection = MainTab:CreateSection("place.functions")
 
 
 local Paragraph = MainTab:CreateParagraph({Title = "Information", Content = "Self-Made, If you're wondering why game_boost, won't work? go to any spawn and make sure you're in the map, and not in the lobby and click game_boost then tadaa! you have got yourself an fps boost, its still playable, keep in mind, this is in a work in progress, expect bugs and errors."})
@@ -68,5 +69,49 @@ local Button = MainTab:CreateButton({
 
 
 local FirstTab = Window:CreateTab("NV.universal", "circle-user-round") -- Title, Image
-local FirstSection = MainTab:CreateSection("Place.Function")
+local FirstSection = FirstTab:CreateSection("nv.functions")
+
+
+local Toggle = FirstTab:CreateToggle({
+   Name = "brightness.control.tnf",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(vlue)
+      if CurrentValue == true then
+        game.Lighting.Brightness = 9
+        else
+          game.Lighting.Brightness = 1
+      end
+   end,
+})
+
+
+local Slider = FirstTab:CreateSlider({
+   Name = "fog.end.control.sld",
+   Range = {0, 100000},
+   Increment = 1,
+   Suffix = "FogEnd",
+   CurrentValue = 500,
+   Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+      game.Lighting.FogEnd = Value
+   end,
+})
+
+
+local SecondTab = Window:CreateTab("plrLocal.self.game", "hammer") -- Title, Image
+local SecondSection = SecondTab:CreateSection(".functions.")
+
+
+local Dropdown = SecondTab:CreateDropdown({
+   Name = "Gamepass Guns",
+   Options = {"Ballistic Shield","AK-47", "OSR", "Desert Eagle", "Dual USPs", "Dual Glocks", "M249", "AR3", "PKM", "SVD Dragunov", "SOBT Shield", "Laser Tripmine", "Strecher", ""},
+   CurrentOption = {"Option 1"},
+   MultipleOptions = false,
+   Flag = "Dropdown1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Options)
+   -- The function that takes place when the selected option is changed
+   -- The variable (Options) is a table of strings for the current selected options
+   end,
+})
 end
