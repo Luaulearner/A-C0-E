@@ -114,20 +114,4 @@ local Slider = FirstTab:CreateSlider({
 
 local SecondTab = Window:CreateTab("plrLocal.self.game", "hammer") -- Title, Image
 local SecondSection = SecondTab:CreateSection(".functions.")
-
-
-local Dropdown = SecondTab:CreateDropdown({
-   Name = "Gamepass Guns",
-   Options = {"Ballistic Shield","AK-47", "OSR", "Desert Eagle", "Dual USPs", "Dual G17s", "M249", "AR3", "PKM", "SVD Dragunov", "SOBT Shield", "Laser Tripmine", "Strecher", "Crowbar", "Saiga-12K", "Colt Python Elite", "HK23", "M40A1", "M21", "Crossbow", "AR2 Alt Fire", "MP5K", "XM29 O.I.C.W", "PP-19 KEDR", "M870", "G36", "G36-SD", "P220", "MP-443 Grach", "M1014", "M240", "Medicine Injector", "Folded Turret", "Blow Torch", "OTs-14 Groza"},
-   CurrentOption = {"Option 1"},
-   MultipleOptions = true,
-   Flag = "Dropdown1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(shittyguns)
-      local args = {
-    [1] = shittyguns
-}
-
-game:GetService("ReplicatedStorage").LoadoutGP:FireServer()
-   end)
-})
 end
