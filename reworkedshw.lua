@@ -22,14 +22,14 @@ if game.PlaceId == 386327051 then
    Discord = {
       Enabled = true, -- Prompt the user to join your Discord server if their executor supports it
       Invite = "2d5SXsCVch", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
-      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+      RememberJoins = false -- Set this to false to make them join the discord every time they load it up
    },
 
    KeySystem = true, -- Set this to true to use our key system
    KeySettings = {
-      Title = "Input Your Key Here..",
-      Subtitle = "hello! sorry for having a key, its just so it prevents spam, and also.. uh.. and etc. btw key resets every week.",
-      Note = "._getkey_.fromdiscordserv", -- Use this to tell the user how to get a key
+      Title = "Specific Code Here",
+      Subtitle = "Key Resets Every Week.",
+      Note = "app-window", -- Use this to tell the user how to get a key
       FileName = "bapibopbdkxk", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
       SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
       GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
@@ -74,7 +74,6 @@ local Button = MainTab:CreateButton({
    workspace.Cache:Destroy()
    workspace.MapScripts:Destroy()
    workspace.Scripts:Destroy()
-   workspace.ImpactsCache:Destroy()
    workspace.AmmoBoxes:Destroy()
    workspace.AnimatedMorphs:Destroy()
    end,
