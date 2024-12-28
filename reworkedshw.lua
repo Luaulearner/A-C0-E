@@ -117,7 +117,4 @@ local Dropdown = SecondTab:CreateDropdown({
 game:GetService("ReplicatedStorage").LoadoutGP:FireServer(unpack(args))
    end,
 })
-
-
-
 end
