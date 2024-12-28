@@ -15,11 +15,24 @@ MainSection:NewButton("Map_UltraBoost", "Basically Removes All Unnesscary parts 
       end
     end
 end)
+
+
 MainSection:NewTextBox("Teleport To", "basically teleports you to people, useful for getting into rps or if ur lost xd btw you need to use the players username not display!!", function(txt)
 	local tpto = game.Workspace.txt.HumanoidRootPart
 	local self = game.Players.LocalPlayer.Character.HumanoidRootPart
 	self.CFrame = tpto.CFrame
 end)
+
+
 MainSection:NewTextBox("SetWalkSpeed", "This should support mobile and pc, for speed ;)", function(speedpower)
-	
+	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = speedpower
+end)
+
+
+Section:NewDropdown("Gamepass Guns", "if you dont see ur wanted gun add me on discord! hallowdark0", {"Ballistic Shield", "OSR", "AK-47", "M249"}, function(currentOption)
+    local args = {
+    [1] = currentOption
+}
+
+game:GetService("ReplicatedStorage").LoadoutGP:FireServer(unpack(args))
 end)
