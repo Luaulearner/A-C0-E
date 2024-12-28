@@ -68,6 +68,20 @@ local Button = MainTab:CreateButton({
 })
 
 
+local Button = MainTab:CreateButton({
+   Name = "clear_cache",
+   Callback = function()
+   workspace.Cache:Destroy()
+   workspace.MapScripts:Destroy()
+   workspace.Scripts:Destroy()
+   workspace.ImpactsCache:Destroy()
+   workspace.AmmoBoxes:Destroy()
+   workspace.AnimatedMorphs:Destroy()
+   end,
+})
+
+
+
 local FirstTab = Window:CreateTab("NV.universal", "circle-user-round") -- Title, Image
 local FirstSection = FirstTab:CreateSection("nv.functions")
 
@@ -115,6 +129,21 @@ local Dropdown = SecondTab:CreateDropdown({
 }
 
 game:GetService("ReplicatedStorage").LoadoutGP:FireServer(unpack(args))
+   end,
+})
+
+
+
+local Input = SecondTab:CreateInput({
+   Name = "tp.player.toplayer",
+   CurrentValue = "",
+   PlaceholderText = "Player Username Not Displayname",
+   RemoveTextAfterFocusLost = false,
+   Flag = "Input1",
+   Callback = function(username)
+      local otol = game.Workspace.username.HumanoidRootPart
+      local ufol = game.Players.LocalPlayer.Character.HumanoidRootPart
+      ufol.CFrame = otol.CFrame
    end,
 })
 end
