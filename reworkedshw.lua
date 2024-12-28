@@ -42,4 +42,31 @@ local MainTab = Window:CreateTab("Home", "app-window") -- Title, Image
 local MainSection = MainTab:CreateSection("Place.Function")
 
 
-local Paragraph = MainTab:CreateParagraph({Title = "Paragraph Example", Content = "Paragraph Example"})
+local Paragraph = MainTab:CreateParagraph({Title = "Information", Content = "Self-Made, If you're wondering why game_boost, won't work? go to any spawn and make sure you're in the map, and not in the lobby and click game_boost then tadaa! you have got yourself an fps boost, its still playable, keep in mind, this is in a work in progress, expect bugs and errors."})
+local Button = MainTab:CreateButton({
+   Name = "game_boost",
+   Callback = function()
+   for _, v in pairs(workspace.Map:GetDescendants()) do
+      if v:IsA("Decal") or v:IsA("Texture") or v:IsA("MeshPart") or v:IsA("Mesh") or v:IsA("BlockMesh") or v:IsA("BevelMesh") or v:IsA("CylinderMesh") or v:IsA("SpecialMesh") or v:IsA("FileMesh") or v:IsA("ParticleEmitter") or v:IsA("TriangleMeshPart") then
+        v:Destroy()
+      end
+    end
+   end,
+})
+
+
+local Button = MainTab:CreateButton({
+   Name = "lobby_boost",
+   Callback = function()
+   for _, v in pairs(workspace.Lobby:GetDescendants()) do
+      if v:IsA("Decal") or v:IsA("Texture") or v:IsA("MeshPart") or v:IsA("Mesh") or v:IsA("BlockMesh") or v:IsA("BevelMesh") or v:IsA("CylinderMesh") or v:IsA("SpecialMesh") or v:IsA("FileMesh") or v:IsA("ParticleEmitter") or v:IsA("TriangleMeshPart") then
+        v:Destroy()
+      end
+    end
+   end,
+})
+
+
+local FirstTab = Window:CreateTab("NV.universal", "circle-user-round") -- Title, Image
+local FirstSection = MainTab:CreateSection("Place.Function")
+end
