@@ -127,22 +127,7 @@ local Dropdown = SecondTab:CreateDropdown({
     [1] = shittyguns
 }
 
-game:GetService("ReplicatedStorage").LoadoutGP:FireServer(unpack(args))
-   end,
-})
-
-
-
-local Input = SecondTab:CreateInput({
-   Name = "tp.player.toplayer",
-   CurrentValue = "nil",
-   PlaceholderText = "Player Username Not Displayname",
-   RemoveTextAfterFocusLost = false,
-   Flag = "Input1",
-   Callback = function(username)
-      local otol = game.Workspace[username]HumanoidRootPart
-      local ufol = game.Players.LocalPlayer.Character.HumanoidRootPart
-      ufol.CFrame = otol.CFrame
-   end,
+game:GetService("ReplicatedStorage").LoadoutGP:FireServer()
+   end)
 })
 end
