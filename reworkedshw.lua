@@ -77,7 +77,7 @@ local Toggle = FirstTab:CreateToggle({
    CurrentValue = false,
    Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(vlue)
-      if CurrentValue == true then
+      if vlue == true then
         game.Lighting.Brightness = 9
         else
           game.Lighting.Brightness = 1
@@ -110,8 +110,14 @@ local Dropdown = SecondTab:CreateDropdown({
    MultipleOptions = false,
    Flag = "Dropdown1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(Options)
-   -- The function that takes place when the selected option is changed
-   -- The variable (Options) is a table of strings for the current selected options
+      local args = {
+    [1] = Options
+}
+
+game:GetService("ReplicatedStorage").LoadoutGP:FireServer(unpack(args))
    end,
 })
+
+
+
 end
