@@ -1,23 +1,25 @@
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/memejames/elerium-v2-ui-library//main/Library", true))()
 
 
-local Mainwindow = library:AddWindow("Home", {
+local window = library:AddWindow("Home", {
 	main_color = Color3.fromRGB(41, 74, 41), -- Color
 	min_size = Vector2.new(250, 346), -- Size of the gui
 	can_resize = true, -- true or false
 })
 
+local features = window:AddTab("Features") -- Name of tab
+features:Show() -- shows the tab
 
-Mainfeatures:AddButton("Do Not Press!",function()
+features:AddButton("Do Not Press!",function()
 	print("why no listennbrother")
 end)
 
 
-Mainfeatures:AddButton("name",function()
+features:AddButton("nbe",function()
 	print("agin bro?")
 end)
 
 
-features:AddButton("name",function()
+features:AddButton("run",function()
 	print("breh")
 end)
