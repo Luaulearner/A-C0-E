@@ -10,7 +10,7 @@ local Window = Rayfield:CreateWindow({
    Icon = "code-xml", -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
    LoadingTitle = "Welcome To Beta-2 First Generation S.H.W.",
    LoadingSubtitle = "Thanks to, @hallowdark0 on discord, and his user Contrsution, on roblox.",
-   Theme = "Serenity", -- Check https://docs.sirius.menu/rayfield/configuration/themes
+   Theme = "Defualt", -- Check https://docs.sirius.menu/rayfield/configuration/themes
 
    DisableRayfieldPrompts = false,
    DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
