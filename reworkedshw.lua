@@ -39,9 +39,13 @@ local Window = Rayfield:CreateWindow({
    }
 })
 
-
+--//MainSection/MainTab
 local MainTab = Window:CreateTab("Home", "house")
 local MainSection = MainTab:CreateSection("b2fg.boosts")
+
+
+local Paragraph = MainTab:CreateParagraph({Title = "How do these things work?", Content = "for b2fg.map you must be in the map not in the lobby, for example bulgarian spawn or maybe even combine spawn, any spawn as long as you are in the map, and for lobby well.. its pretty self explanatory, and i recommend when using b2fg boosts, also do b2fg nv, so atleast you coould see shit."})
+
 
 
 local Button = MainTab:CreateButton({
@@ -64,6 +68,39 @@ local Button = MainTab:CreateButton({
         v:Destroy()
       end
     end
+   end,
+})
+
+
+local Button = MainTab:CreateButton({
+   Name = "b2fg.unnecessaryparts",
+   Callback = function()
+     workspace.AmmoBoxes:Destroy() --// super simple, boost kind of fps XD
+   end,
+})
+
+local Button = MainTab:CreateButton({
+   Name = "b2fg.destroyinterface",
+   Callback = function()
+      Rayfield:Destroy()
+   end,
+})
+
+local MainSection = MainTab:CreateSection("b2fg.nv")
+
+
+local Button = MainTab:CreateButton({
+   Name = "b2fg.brightness",
+   Callback = function()
+      game.Lighting.Brightness = 10
+   end,
+})
+
+
+local Button = MainTab:CreateButton({
+   Name = "b2fg.ambientbrightness",
+   Callback = function()
+      game.Lighting.Ambient = Color3.fromRGB(255, 255, 255)
    end,
 })
 end
