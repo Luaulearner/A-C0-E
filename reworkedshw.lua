@@ -38,4 +38,32 @@ local Window = Rayfield:CreateWindow({
       Key = {"https://pastebin.com/raw/DaUDNwyf"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
    }
 })
+
+
+local MainTab = Window:CreateTab("Home", "house")
+local MainSection = MainTab:CreateSection("b2fg.boosts")
+
+
+local Button = MainTab:CreateButton({
+   Name = "b2fg.map",
+   Callback = function()
+      for _, v in pairs(workspace.Map:GetDescendants()) do
+      if v:IsA("Decal") or v:IsA("Texture") or v:IsA("MeshPart") or v:IsA("Mesh") or v:IsA("BlockMesh") or v:IsA("BevelMesh") or v:IsA("CylinderMesh") or v:IsA("SpecialMesh") or v:IsA("FileMesh") or v:IsA("ParticleEmitter") or v:IsA("TriangleMeshPart") then
+        v:Destroy()
+      end
+    end
+   end,
+})
+
+
+local Button = MainTab:CreateButton({
+   Name = "b2fg.lobby",
+   Callback = function()
+      for _, v in pairs(workspace.Lobby:GetDescendants()) do
+      if v:IsA("Decal") or v:IsA("Texture") or v:IsA("MeshPart") or v:IsA("Mesh") or v:IsA("BlockMesh") or v:IsA("BevelMesh") or v:IsA("CylinderMesh") or v:IsA("SpecialMesh") or v:IsA("FileMesh") or v:IsA("ParticleEmitter") or v:IsA("TriangleMeshPart") then
+        v:Destroy()
+      end
+    end
+   end,
+})
 end
