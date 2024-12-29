@@ -207,6 +207,8 @@ local window = library:AddWindow("Post-War Combine", {
 	can_resize = true, -- true or false
 })
 
+local features = window:AddTab("combine elite niggas") -- Name of tab
+features:Show() -- shows the tab
 
 features:AddButton("goodbye map and hello fps boost",function()
 	for _, v in pairs(workspace.Map:GetDescendants()) do
@@ -215,9 +217,6 @@ features:AddButton("goodbye map and hello fps boost",function()
       end
     end
 end)
-
-local features = window:AddTab("combine elite niggas") -- Name of tab
-features:Show() -- shows the tab
 
 
 features:AddButton("bye lobby and hi fps boost", function()
