@@ -44,9 +44,6 @@ local MainTab = Window:CreateTab("Home", "house")
 local MainSection = MainTab:CreateSection("b2fg.boosts")
 
 
-local Paragraph = MainTab:CreateParagraph({Title = "How do these things work?", Content = "for b2fg.map you must be in the map not in the lobby, for example bulgarian spawn or maybe even combine spawn, any spawn as long as you are in the map, and for lobby well.. its pretty self explanatory, and i recommend when using b2fg boosts, also do b2fg nv, so atleast you coould see shit."})
-
-
 
 local Button = MainTab:CreateButton({
    Name = "b2fg.map",
