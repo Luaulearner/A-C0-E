@@ -65,7 +65,7 @@ local Button = MainTab:CreateButton({
 local Button = MainTab:CreateButton({
    Name = "b3fg.lobby",
    Callback = function()
-      for _, v in pairs(workspace.Map:GetDescendants()) do
+      for _, v in pairs(workspace.Lobby:GetDescendants()) do
       if v:IsA("Decal") or v:IsA("Texture") or v:IsA("MeshPart") or v:IsA("Mesh") or v:IsA("BlockMesh") or v:IsA("BevelMesh") or v:IsA("CylinderMesh") or v:IsA("SpecialMesh") or v:IsA("FileMesh") or v:IsA("ParticleEmitter") or v:IsA("TriangleMeshPart") then
         v:Destroy()
       end
@@ -79,6 +79,7 @@ local Button = MainTab:CreateButton({
    Callback = function()
       workspace.AmmoBoxes:Destroy()
       workspace.Cache:Destroy()
+      workspace.MapScripts.Props:Destroy()
    end,
 })
 
