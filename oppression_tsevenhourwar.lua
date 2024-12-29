@@ -103,5 +103,39 @@ local Slider = MainTab:CreateSlider({
 })
 
 
+local SecTab = Window:CreateTab("<•> Advanced", "app-window")
+local SecSection = SecTab:CreateSection("PlayerBoard")
 
+
+local Label = SecTab:CreateLabel("Welcome To The PlayerBoard", "user-round-cog")
+local Paragraph = SecTab:CreateParagraph({Title = "How to use it?", Content = "self explanatory, you could easily figure it out, without needing any support or tutorial at all."})
+
+
+local Button = SecTab:CreateButton({
+   Name = "lighting_bright",
+   Callback = function()
+      game.Lighting.Brightness = 12
+   end,
+})
+
+
+local Button = SecTab:CreateButton({
+   Name = "lighting_ambient_bright",
+   Callback = function()
+      game.Lighting.Ambient = Color3.fromRGB(255, 255, 255)
+   end,
+})
+
+
+local Input = SecTab:CreateInput({
+   Name = "",
+   CurrentValue = "",
+   PlaceholderText = "Input Placeholder",
+   RemoveTextAfterFocusLost = false,
+   Flag = "Input1",
+   Callback = function(Text)
+   -- The function that takes place when the input is changed
+   -- The variable (Text) is a string for the value in the text box
+   end,
+})
 end
