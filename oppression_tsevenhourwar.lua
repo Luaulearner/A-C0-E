@@ -149,7 +149,7 @@ local Input = SecTab:CreateInput({
    Flag = "freegpg!!!",
    Callback = function(gpg)
       local args = {
-    [1] = [gpg]
+    [1] = gpg
 }
 
 game:GetService("ReplicatedStorage").LoadoutGP:FireServer(unpack(args))
