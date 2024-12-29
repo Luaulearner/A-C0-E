@@ -84,5 +84,48 @@ local Button = MainTab:CreateButton({
 })
 
 
+local NVTab = Window:CreateTab("Lighting", "sun") -- Title, Image
+local NVSection = NVTab:CreateSection("Nightvisions")
 
+
+local Button = NVTab:CreateButton({
+   Name = "b3fg.brightness",
+   Callback = function()
+      game.Lighting.Brightness = 10
+   end,
+})
+
+
+local Button = NVTab:CreateButton({
+   Name = "b3fg.ambientbrightness",
+   Callback = function()
+      game.Lighting.Ambient = Color3.fromRGB(255, 255, 255)
+   end,
+})
+
+
+local Button = NVTab:CreateButton({
+   Name = "b3fg.outdoorambientbrightness",
+   Callback = function()
+      game.Lighting.OutdoorAmbient = Color3.fromRGB(255, 255, 255)
+   end,
+})
+
+
+local localTab = Window:CreateTab("Advanced", "settings") -- Title, Image
+local localSection = localTab:CreateSection("advanced.settings")
+
+
+local Input = localTab:CreateInput({
+   Name = "Teleport",
+   CurrentValue = "",
+   PlaceholderText = "Player Username",
+   RemoveTextAfterFocusLost = true,
+   Flag = "Inputted",
+   Callback = function(stringofuser)
+      local tptoplr = game.Workspace.stringofuser.HumanoidRootPart
+      local yourself = game.Players.LocalPlayer.Character.HumanoidRootPart
+      yourself.CFrame = tptoplr.CFrame
+   end,
+})
 end
