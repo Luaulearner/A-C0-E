@@ -37,6 +37,14 @@ features:AddButton("Bai bai Props",function()
   end
 end)
 
+features:AddButton("All Smooth Plastic",function()
+	for _, v in pairs(workspace.Map:GetDescendants()) do
+	  if v:IsA("BasePart") or v:IsA("Part") then
+	    v.Material = "SmoothPlastic"
+	  end
+	end
+end)
+
 features:AddButton("So Bright!",function()
 	game.Lighting.Brightness = 20
 end)
