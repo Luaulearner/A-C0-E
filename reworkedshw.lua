@@ -72,4 +72,16 @@ local Button = MainTab:CreateButton({
     end
    end,
 })
+
+
+local Button = MainTab:CreateButton({
+   Name = "b3fg.unnecessaryparts",
+   Callback = function()
+      workspace.AmmoBoxes:Destroy()
+      workspace.Cache:Destroy()
+   end,
+})
+
+
+
 end
