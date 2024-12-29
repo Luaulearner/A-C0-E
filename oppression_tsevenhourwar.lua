@@ -1,6 +1,7 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local nonglobalplayername = game.Players.LocalPlayer
 --// RayField menu
+print("debug")
 if game.PlaceId == 386327051 then
 local Window = Rayfield:CreateWindow({
    Name = "BETA-8 Second Generation Oppression",
