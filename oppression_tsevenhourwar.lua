@@ -1,6 +1,7 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local nonglobalplayername = game.Players.LocalPlayer
 --// RayField menu
+if game.PlaceId == 386327051 then
 local Window = Rayfield:CreateWindow({
    Name = "BETA-8 Second Generation Oppression",
    Icon = "code-xml", -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
@@ -34,3 +35,20 @@ local Window = Rayfield:CreateWindow({
       Key = {"pstb.com88_-665738827466290193847281919192938484757382919293747472819294747472829194747573728195958484747363636251515252636374748585969696070707966958554474637373625524253536474758586969707076060696969696958855584744747373636363636363626262626262626262525252424225536374747488596669991849999199387747281736382746284628478264625171829405037271514152748596060382817615152738499505038272716618393950504837271728394040382818374%2024B2FGSHWKEY"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
    }
 })
+
+
+local MainTab = Window:CreateTab("<•> Home", "settings")
+local MainSection = MainTab:CreateSection("Dashboard")
+
+
+Rayfield:Notify({
+   Title = "Thank you.",
+   Content = "Thank you very much, for using this script i have worked hard and day and night, stayed up all night just to make this, just for you guys, enjoy the script.",
+   Duration = 10,
+   Image = "shield-alert",
+})
+
+
+local Label = MainTab:CreateLabel("Welcome To The Dashboard.", "layout-dashboard")
+local Paragraph = MainTab:CreateParagraph({Title = "How to use it?", Content = "Paragraph Example"})
+end
