@@ -128,20 +128,4 @@ local Input = localTab:CreateInput({
       yourself.CFrame = tptoplr.CFrame
    end,
 })
-
-
-local Dropdown = localTab:CreateDropdown({
-   Name = "Gamepass Guns",
-   Options = {"Ballistic Shield","AK-47"},
-   CurrentOption = {"Option 1"},
-   MultipleOptions = false,
-   Flag = "Dropdown1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Options)
-      local args = {
-    [1] = Options
-}
-
-game:GetService("ReplicatedStorage").LoadoutGP:FireServer(unpack(args))
-   end,
-})
 end
