@@ -71,20 +71,7 @@ local Button = MainTab:CreateButton({
    end,
 })
 
-
-local Button = MainTab:CreateButton({
-   Name = "b2fg.unnecessaryparts",
-   Callback = function()
-     workspace.AmmoBoxes:Destroy() --// super simple, boost kind of fps XD
-   end,
-})
-
-local Button = MainTab:CreateButton({
-   Name = "b2fg.destroyinterface",
-   Callback = function()
-      Rayfield:Destroy()
-   end,
-})
+--//NVTab
 
 local NVTab = Window:CreateTab("Lighting", "sun")
 local NVSection = NVTab:CreateSection("b2fg.nv")
