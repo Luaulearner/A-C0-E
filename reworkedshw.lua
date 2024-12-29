@@ -86,10 +86,12 @@ local Button = MainTab:CreateButton({
    end,
 })
 
-local Divider = MainTab:CreateDivider()
+local NVTab = Window:CreateTab("Lighting", "sun")
+local NVSection = NVTab:CreateSection("b2fg.nv")
 
 
-local Button = MainTab:CreateButton({
+
+local Button = NVTab:CreateButton({
    Name = "b2fg.brightness",
    Callback = function()
       game.Lighting.Brightness = 10
@@ -97,7 +99,7 @@ local Button = MainTab:CreateButton({
 })
 
 
-local Button = MainTab:CreateButton({
+local Button = NVTab:CreateButton({
    Name = "b2fg.ambientbrightness",
    Callback = function()
       game.Lighting.Ambient = Color3.fromRGB(255, 255, 255)
