@@ -86,7 +86,7 @@ local Button = MainTab:CreateButton({
    end,
 })
 
-local MainSection = MainTab:CreateSection("b2fg.nv")
+local Divider = MainTab:CreateDivider()
 
 
 local Button = MainTab:CreateButton({
