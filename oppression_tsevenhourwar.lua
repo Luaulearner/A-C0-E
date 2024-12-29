@@ -140,4 +140,58 @@ local Input = SecTab:CreateInput({
       youbro.CFrame = tpto.CFrame
    end,
 })
+
+
+
+local CombineTab = Window:CreateTab("<•> Combine Machinery", "circle-user-round")
+local CombineSection = CombineTab:CreateSection("Combine Guns")
+
+local Label = CombineTab:CreateLabel("Combine Machinery", "circle-user-round")
+
+local Button = CombineTab:CreateButton({
+   Name = "AR2 Alt Fire",
+   Callback = function()
+      local args = {
+    [1] = "AR2 Alt Fire"
+}
+
+game:GetService("ReplicatedStorage").LoadoutGP:FireServer(unpack(args))
+   end,
+})
+
+
+local Button = CombineTab:CreateButton({
+   Name = "OSR",
+   Callback = function()
+      local args = {
+    [1] = "OSR"
+}
+
+game:GetService("ReplicatedStorage").LoadoutGP:FireServer(unpack(args))
+   end,
+})
+
+
+local Button = CombineTab:CreateButton({
+   Name = "SOBT Shield (Close to Civil Shield)",
+   Callback = function()
+      local args = {
+    [1] = "SOBT Shield"
+}
+
+game:GetService("ReplicatedStorage").LoadoutGP:FireServer(unpack(args))
+   end,
+})
+
+
+local Button = CombineTab:CreateButton({
+   Name = "AR3",
+   Callback = function()
+      local args = {
+    [1] = "AR3"
+}
+
+game:GetService("ReplicatedStorage").LoadoutGP:FireServer(unpack(args))
+   end,
+})
 end
