@@ -128,14 +128,31 @@ local Button = SecTab:CreateButton({
 
 
 local Input = SecTab:CreateInput({
-   Name = "",
+   Name = "Teleportation",
    CurrentValue = "",
-   PlaceholderText = "Input Placeholder",
-   RemoveTextAfterFocusLost = false,
-   Flag = "Input1",
-   Callback = function(Text)
-   -- The function that takes place when the input is changed
-   -- The variable (Text) is a string for the value in the text box
+   PlaceholderText = "Enter Username",
+   RemoveTextAfterFocusLost = true,
+   Flag = "epictp",
+   Callback = function(usernameoftheguy)
+      local tpto = game.Workspace[usernameoftheguy].HumanoidRootPart
+      local youbro = game.Players.LocalPlayer.Character.HumanoidRootPart
+      youbro.CFrame = tpto.CFrame
+   end,
+})
+
+
+local Input = SecTab:CreateInput({
+   Name = "Gamepass Guns",
+   CurrentValue = "",
+   PlaceholderText = "Enter Gamepass Gun Name",
+   RemoveTextAfterFocusLost = true,
+   Flag = "freegpg!!!",
+   Callback = function(gpg)
+      local args = {
+    [1] = [gpg]
+}
+
+game:GetService("ReplicatedStorage").LoadoutGP:FireServer(unpack(args))
    end,
 })
 end
