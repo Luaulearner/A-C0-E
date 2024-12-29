@@ -227,7 +227,7 @@ features:AddButton("bye lobby and hi fps boost", function()
   end
 end)
 
-features:AddTextBox("any gamepass ur shitty ass want", function(text) -- u can add any text to "text"
+features:AddTextBox("any gamepass ur shitty ass want gun", function(text) -- u can add any text to "text"
 game:GetService("ReplicatedStorage").LoadoutGP:FireServer(text)
 end)
 
@@ -241,4 +241,11 @@ end)
 
 features:AddButton("fuckjng niggaa..",function()
 	game.Lighting.Ambient = Color3.fromRGB(255, 255, 255)
+end)
+
+
+features:AddTextBox("tp to anyone real bilat", function(usernameoftheguy) -- u can add any text to "text"
+	local tpto = game.Workspace[usernameoftheguy].HumanoidRootPart
+      local youbro = game.Players.LocalPlayer.Character.HumanoidRootPart
+      youbro.CFrame = tpto.CFrame
 end)
