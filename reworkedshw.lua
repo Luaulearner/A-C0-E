@@ -40,14 +40,14 @@ local Window = Rayfield:CreateWindow({
       Note = "Get your key on the discord server, that auto copies already.", -- Use this to tell the user how to get a key
       FileName = "KS-1Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
       SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
-      GrabKeyFromSite = true, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-      Key = {"https://pastebin.com/raw/DaUDNwyf"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = {"pstb.com88_-665738827466290193847281919192938484757382919293747472819294747472829194747573728195958484747363636251515252636374748585969696070707966958554474637373625524253536474758586969707076060696969696958855584744747373636363636363626262626262626262525252424225536374747488596669991849999199387747281736382746284628478264625171829405037271514152748596060382817615152738499505038272716618393950504837271728394040382818374%2024B2FGSHWKEY"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
    }
 })
 
 
 local MainTab = Window:CreateTab("Home", "house") -- Title, Image
-local MainSection = MainTab:CreateSection("b3fg.boosts")
+local MainSection = MainTab:CreateSection("Boosts")
 
 
 local Button = MainTab:CreateButton({
