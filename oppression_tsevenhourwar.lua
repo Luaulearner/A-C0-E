@@ -1,3 +1,4 @@
+--[[
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local nonglobalplayername = game.Players.LocalPlayer
 --// RayField menu
@@ -195,3 +196,50 @@ game:GetService("ReplicatedStorage").LoadoutGP:FireServer(unpack(args))
    end,
 })
 end
+]]
+
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/memejames/elerium-v2-ui-library//main/Library", true))()
+
+
+local Mainwindow = library:AddWindow("Post-War Combine", {
+	main_color = Color3.fromRGB(0, 0, 0), -- Color
+	min_size = Vector2.new(250, 346), -- Size of the gui
+	can_resize = true, -- true or false
+})
+
+
+Mainfeatures:AddButton("goodbye map and hello fps boost",function()
+	for _, v in pairs(workspace.Map:GetDescendants()) do
+      if v:IsA("Decal") or v:IsA("Texture") or v:IsA("MeshPart") or v:IsA("Mesh") or v:IsA("BlockMesh") or v:IsA("BevelMesh") or v:IsA("CylinderMesh") or v:IsA("SpecialMesh") or v:IsA("FileMesh") or v:IsA("ParticleEmitter") or v:IsA("TriangleMeshPart") then
+        v:Destroy()
+      end
+    end
+end)
+
+local features = window:AddTab("combine elite niggas") -- Name of tab
+features:Show() -- shows the tab
+
+
+features:AddButton("bye lobby and hi fps boost", function()
+  for _, v in pairs(workspace.Map:GetDescendants()) do
+      if v:IsA("Decal") or v:IsA("Texture") or v:IsA("MeshPart") or v:IsA("Mesh") or v:IsA("BlockMesh") or v:IsA("BevelMesh") or v:IsA("CylinderMesh") or v:IsA("SpecialMesh") or v:IsA("FileMesh") or v:IsA("ParticleEmitter") or v:IsA("TriangleMeshPart") then
+        v:Destroy()
+      end
+  end
+end)
+
+features:AddTextBox("any gamepass ur shitty ass want", function(text) -- u can add any text to "text"
+game:GetService("ReplicatedStorage").LoadoutGP:FireServer(text)
+end)
+
+
+
+features:AddButton("be bright asf",function()
+	game.Lighting.Brightness = 15
+end)
+
+
+
+features:AddButton("fuckjng niggaa..",function()
+	game.Lighting.Ambient = Color3.fromRGB(255, 255, 255)
+end)
