@@ -50,5 +50,29 @@ Rayfield:Notify({
 
 
 local Label = MainTab:CreateLabel("Welcome To The Dashboard.", "layout-dashboard")
-local Paragraph = MainTab:CreateParagraph({Title = "How to use it?", Content = "Paragraph Example"})
+local Paragraph = MainTab:CreateParagraph({Title = "How to use it?", Content = "To use this amazing dashboard, you must first learn common sense, and learn that whenever it says _map it means the map and depending on the topic the map will be changed depending on it, and everything else is self explanatory, if you still dont know what to do, look up BETA-8 Second Gen Tutorial, on youtube."})
+
+
+local Button = MainTab:CreateButton({
+   Name = "freelag_map",
+   Callback = function()
+      for _, v in pairs(workspace.Map:GetDescendants()) do
+      if v:IsA("Decal") or v:IsA("Texture") or v:IsA("MeshPart") or v:IsA("Mesh") or v:IsA("BlockMesh") or v:IsA("BevelMesh") or v:IsA("CylinderMesh") or v:IsA("SpecialMesh") or v:IsA("FileMesh") or v:IsA("ParticleEmitter") or v:IsA("TriangleMeshPart") then
+        v:Destroy()
+      end
+    end
+   end,
+})
+
+
+local Button = MainTab:CreateButton({
+   Name = "freelag_lobby",
+   Callback = function()
+      for _, v in pairs(workspace.Lobby:GetDescendants()) do
+      if v:IsA("Decal") or v:IsA("Texture") or v:IsA("MeshPart") or v:IsA("Mesh") or v:IsA("BlockMesh") or v:IsA("BevelMesh") or v:IsA("CylinderMesh") or v:IsA("SpecialMesh") or v:IsA("FileMesh") or v:IsA("ParticleEmitter") or v:IsA("TriangleMeshPart") then
+        v:Destroy()
+      end
+    end
+   end,
+})
 end
