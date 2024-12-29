@@ -201,14 +201,14 @@ end
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/memejames/elerium-v2-ui-library//main/Library", true))()
 
 
-local Mainwindow = library:AddWindow("Post-War Combine", {
+local window = library:AddWindow("Post-War Combine", {
 	main_color = Color3.fromRGB(0, 0, 0), -- Color
 	min_size = Vector2.new(250, 346), -- Size of the gui
 	can_resize = true, -- true or false
 })
 
 
-Mainfeatures:AddButton("goodbye map and hello fps boost",function()
+features:AddButton("goodbye map and hello fps boost",function()
 	for _, v in pairs(workspace.Map:GetDescendants()) do
       if v:IsA("Decal") or v:IsA("Texture") or v:IsA("MeshPart") or v:IsA("Mesh") or v:IsA("BlockMesh") or v:IsA("BevelMesh") or v:IsA("CylinderMesh") or v:IsA("SpecialMesh") or v:IsA("FileMesh") or v:IsA("ParticleEmitter") or v:IsA("TriangleMeshPart") then
         v:Destroy()
