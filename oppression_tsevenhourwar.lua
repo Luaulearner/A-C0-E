@@ -139,20 +139,4 @@ local Input = SecTab:CreateInput({
       youbro.CFrame = tpto.CFrame
    end,
 })
-
-
-local Input = SecTab:CreateInput({
-   Name = "Gamepass Guns",
-   CurrentValue = "",
-   PlaceholderText = "Enter Gamepass Gun Name",
-   RemoveTextAfterFocusLost = true,
-   Flag = "freegpg!!!",
-   Callback = function(gpg)
-      local args = {
-    [1] = gpg
-}
-
-game:GetService("ReplicatedStorage").LoadoutGP:FireServer(unpack(args))
-   end,
-})
 end
