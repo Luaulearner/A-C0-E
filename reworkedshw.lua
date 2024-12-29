@@ -123,7 +123,7 @@ local Input = localTab:CreateInput({
    RemoveTextAfterFocusLost = true,
    Flag = "Inputted",
    Callback = function(stringofuser)
-      local tptoplr = game.Workspace.stringofuser.HumanoidRootPart
+      local tptoplr = game.Workspace[stringofuser].HumanoidRootPart
       local yourself = game.Players.LocalPlayer.Character.HumanoidRootPart
       yourself.CFrame = tptoplr.CFrame
    end,
