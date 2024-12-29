@@ -46,7 +46,7 @@ local Window = Rayfield:CreateWindow({
 })
 
 
-local MainTab = Window:CreateTab("Home", "house") -- Title, Image
+local MainTab = Window:CreateTab("Home", "bug-play") -- Title, Image
 local MainSection = MainTab:CreateSection("Boosts")
 
 
