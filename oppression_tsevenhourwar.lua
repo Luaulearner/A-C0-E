@@ -9,8 +9,8 @@ local window = library:AddWindow("Alpha-9 Third Gen", {
 })
 
 
-local features = Mainwindow:AddTab("Home Sweet Home.") -- Name of tab
-features:Show() -- shows the tab
+local Mainfeatures = window:AddTab("Home Sweet Home.") -- Name of tab
+Mainfeatures:Show() -- shows the tab
 
 
 Mainfeatures:AddButton("name",function()
