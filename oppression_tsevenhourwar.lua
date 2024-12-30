@@ -46,7 +46,7 @@ features:AddButton("All Smooth Plastic",function()
 end)
 
 features:AddButton("So Bright!",function()
-	game.Lighting.Brightness = 20
+	game.Lighting.Brightness = 17
 end)
 
 features:AddButton("Ooh, Sunny Ambient.",function()
