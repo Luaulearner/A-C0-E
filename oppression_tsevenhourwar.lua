@@ -88,4 +88,4 @@ local switch = features:AddSwitch("loop rconsoleclear()", function(bool)
 	   end
 	 end
 end)
-switch:Set(false)
+switch:Set(true)
