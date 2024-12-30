@@ -67,3 +67,15 @@ features:AddTextBox("Teleport", function(usernameoftheguy) -- u can add any text
 	local b0 = game.Players.LocalPlayer.Character.HumanoidRootPart
 	b0.CFrame = a0.CFrame
 end)
+
+
+features:AddTextBox("Teleport To Anything", function(modelnameorpart) -- u can add any text to "text"
+	local a1 = game.Workspace.Maps[modelnameorpart]
+	local b1 = game.Players.LocalPlayer.Character.HumanoidRootPart
+	b1.CFrame = a1.CFrame
+end)
+
+
+features:AddTextBox("Speed Modifier", function(thespeed) -- u can add any text to "text"
+	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = thespeed
+end)
