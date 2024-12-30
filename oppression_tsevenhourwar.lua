@@ -81,3 +81,11 @@ features:AddTextBox("Speed Modifier", function(thespeed) -- u can add any text t
 end)
 
 
+local switch = features:AddSwitch("loop rconsoleclear()", function(bool)
+	 if bool == true then
+	   while task.wait(0.1) do
+	     rconsoleclear()
+	   end
+	 end
+end)
+switch:Set(false)
