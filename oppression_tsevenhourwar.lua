@@ -79,3 +79,10 @@ end)
 features:AddTextBox("Speed Modifier", function(thespeed) -- u can add any text to "text"
 	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = thespeed
 end)
+
+
+features:AddTextBox("Get All Guns", function(gundyes)
+  for _, v in pairs(game:GetService("ReplicatedStorage").Common.CGS.Weapons:GetChildren()) do
+game:GetService("ReplicatedStorage").LoadoutGP:FireServer(v.Name)
+end
+end)
